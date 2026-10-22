@@ -1,0 +1,648 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepan Raj R | Strategic Talent Acquisition Partner & Technical Recruiter</title>
+  <meta name="description" content="Portfolio of Deepan Raj R - Strategic Talent Acquisition Business Partner and Senior Technical Recruiter with 4+ years of experience across GCCs, deep-tech startups, and consulting firms." />
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      --bg: #070b14;
+      --card-bg: rgba(15, 23, 42, 0.75);
+      --card-border: rgba(148, 163, 184, 0.12);
+      --primary: #38bdf8;
+      --primary-glow: rgba(56, 189, 248, 0.28);
+      --accent: #10b981;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --highlight: #f59e0b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 100% 30%, rgba(99, 102, 241, 0.14) 0%, transparent 40%),
+        radial-gradient(circle at 0% 70%, rgba(16, 185, 129, 0.10) 0%, transparent 40%);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(16px);
+      background: rgba(7, 11, 20, 0.85);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 90px 0 60px;
+      text-align: center;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin-bottom: 16px;
+    }
+
+    .hero-sub {
+      font-size: 1.25rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero-bio {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 780px;
+      margin: 0 auto 36px;
+    }
+
+    .cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #070b14;
+      box-shadow: 0 4px 20px var(--primary-glow);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Metric Cards */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 50px 0;
+    }
+
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 24px;
+      border-radius: 12px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .metric-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 50px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 36px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title i {
+      color: var(--primary);
+    }
+
+    /* Timeline */
+    .timeline {
+      border-left: 2px solid var(--card-border);
+      margin-left: 10px;
+      padding-left: 32px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 38px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -39px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 12px var(--primary);
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .role-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .role-company {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .role-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .role-bullets {
+      margin-top: 12px;
+      list-style-type: none;
+    }
+
+    .role-bullets li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+    }
+
+    .role-bullets li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 24px;
+      border-radius: 12px;
+      backdrop-filter: blur(12px);
+    }
+
+    .skill-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      color: var(--primary);
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* Dual Grid */
+    .dual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 24px;
+      border-radius: 12px;
+      backdrop-filter: blur(12px);
+    }
+
+    .award-item, .project-item {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .award-item:last-child, .project-item:last-child {
+      border-bottom: none;
+    }
+
+    /* Contact Banner */
+    .contact-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.12), rgba(99, 102, 241, 0.08));
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 48px;
+      border-radius: 16px;
+      text-align: center;
+      margin: 40px 0;
+      backdrop-filter: blur(12px);
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 36px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.3rem; }
+      .dual-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="#" class="logo">Deepan Raj <span>R</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Competencies</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="about">
+    <div class="container">
+      <div class="status-badge">
+        <span class="pulse"></span> Open to Strategic TA & Tech Recruiting Opportunities
+      </div>
+      <h1>Deepan Raj R</h1>
+      <div class="hero-sub">Strategic Talent Acquisition Business Partner | Technical Recruiter</div>
+      <p class="hero-bio">
+        MBA in HRM & Finance with <strong>4+ years</strong> of hands-on experience building high-performing teams across IT Software, Robotics, Product, Data/AI/ML, and Executive Leadership. Experienced in scaling startups (0→1 and 1→2), GCC global capability centers, and consulting environments through data intelligence and ATS automation.
+      </p>
+      <div class="cta-group">
+        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Let's Connect</a>
+        <a href="https://www.linkedin.com/in/deepan-raj-r/" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
+        <a href="https://github.com/deepanrajprince" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Metrics Bar -->
+  <div class="container">
+    <div class="metrics-bar">
+      <div class="metric-card">
+        <div class="metric-number">4+</div>
+        <div class="metric-label">Years of TA Experience</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number">76%</div>
+        <div class="metric-label">Time-to-Fill Reduction</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number">95%</div>
+        <div class="metric-label">Offer Acceptance Rate</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number">100%</div>
+        <div class="metric-label">In-House Closures (Zero Agency)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience Timeline -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Professional Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="role-header">
+            <div class="role-title">Senior Recruiter</div>
+            <div class="role-meta">Sep 2025 – Present | Bengaluru, India</div>
+          </div>
+          <div class="role-company">ANSCER Robotics (Series A Deep-Tech)</div>
+          <ul class="role-bullets">
+            <li>Led end-to-end technical, business, executive, and campus hiring as the core TA partner.</li>
+            <li>Scaled teams 1× → 2× across Software, Engineering, and Business functions, establishing PAN-India Sales & Marketing capabilities.</li>
+            <li>Implemented and optimized <strong>Zoho Recruit ATS</strong>, designed recruitment SOPs, and introduced centralized pipeline reporting.</li>
+            <li>Conducted salary benchmarking across 75+ robotics companies in India. Maintained <strong>100% in-house closures</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="role-header">
+            <div class="role-title">Talent Acquisition Associate</div>
+            <div class="role-meta">Oct 2024 – Aug 2025 | Bengaluru, India</div>
+          </div>
+          <div class="role-company">HeyCoach</div>
+          <ul class="role-bullets">
+            <li>Closed <strong>60+ niche technical, non-technical, and campus positions</strong> from Q4 2024 to Q3 2025.</li>
+            <li>Reduced Time-to-Fill by 76% through streamlined evaluations, aligned interview panels, and proactive sourcing.</li>
+            <li>Maintained an <strong>85% offer acceptance rate</strong> across all business units.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="role-header">
+            <div class="role-title">Tech Recruiter – APAC</div>
+            <div class="role-meta">Jun 2024 – Oct 2024 | Bengaluru, India</div>
+          </div>
+          <div class="role-company">Nielsen (GCC Capability Center)</div>
+          <ul class="role-bullets">
+            <li>Partnered with global CTO, Engineering Directors, and US/India leads to staff Data, Platform, R&D, and Cloud teams.</li>
+            <li>Closed 20+ critical P1–P4 roles in Q3 2024; hired top 1% Member of Technical Staff (MTS) talent from Tier-1 colleges (IITs, NITs, BITS).</li>
+            <li>Achieved a <strong>95% offer acceptance rate</strong> and tracked end-to-end recruitment via <strong>Lever ATS</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="role-header">
+            <div class="role-title">HR IT Recruiter</div>
+            <div class="role-meta">Jun 2022 – Jun 2024 | Bengaluru, India</div>
+          </div>
+          <div class="role-company">Orion Consulting</div>
+          <ul class="role-bullets">
+            <li>Executed IT hiring across Digital AI, SaaS, BFSI, Semiconductor, and E-commerce domains.</li>
+            <li>Elevated offer-to-join ratio and applicant pipeline quality by 95%.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Core Competencies & Tools</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-bullseye" style="color:var(--primary);"></i> Talent Acquisition</h3>
+          <div class="skill-tags">
+            <span class="tag">Full-Cycle Recruitment</span>
+            <span class="tag">Executive Search</span>
+            <span class="tag">Tech & Leadership Hiring</span>
+            <span class="tag">Campus Recruitment</span>
+            <span class="tag">Salary Benchmarking</span>
+            <span class="tag">Talent Mapping</span>
+            <span class="tag">Offer Negotiation</span>
+            <span class="tag">Boolean Search</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-server" style="color:var(--accent);"></i> ATS & Technology</h3>
+          <div class="skill-tags">
+            <span class="tag">Zoho Recruit</span>
+            <span class="tag">Lever ATS</span>
+            <span class="tag">Workday</span>
+            <span class="tag">Oracle</span>
+            <span class="tag">iCIMS</span>
+            <span class="tag">LinkedIn Recruiter</span>
+            <span class="tag">Instahyre</span>
+            <span class="tag">Naukri & Hirist</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-chart-line" style="color:var(--highlight);"></i> Analytical & AI Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">ChatGPT & Claude AI</span>
+            <span class="tag">Google AI Studio</span>
+            <span class="tag">Python & Pandas</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Google Sheets / Excel</span>
+            <span class="tag">GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements">
+    <div class="container">
+      <div class="dual-grid">
+        <div class="card">
+          <h3 style="margin-bottom: 20px; font-size: 1.25rem;"><i class="fa-solid fa-award" style="color:var(--highlight);"></i> Awards & Honors</h3>
+          <div class="award-item">
+            <strong>Best Talent Partnership Recruiter</strong> – 2025
+            <p style="color: var(--text-muted); font-size: 0.85rem;">Recognized for business partnering & executive closures.</p>
+          </div>
+          <div class="award-item">
+            <strong>Top Performing Recruiter</strong> – 2024
+            <p style="color: var(--text-muted); font-size: 0.85rem;">Awarded for rapid time-to-fill & conversion metrics.</p>
+          </div>
+          <div class="award-item">
+            <strong>Top 3 Recruiter Award</strong> – 2023
+          </div>
+          <div class="award-item">
+            <strong>Certified Tech Recruiter</strong> – Hirist (Jan 2024)
+          </div>
+          <div class="award-item">
+            <strong>Naukri Maestro Recruiter</strong> – Sep 2023
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom: 20px; font-size: 1.25rem;"><i class="fa-solid fa-graduation-cap" style="color:var(--primary);"></i> Education & Analytics</h3>
+          <div class="project-item">
+            <strong>MBA in Human Resources Management & Finance</strong>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">JAIN University, Bangalore (2021 – 2023)</p>
+          </div>
+          <div class="project-item">
+            <strong>Bachelor of Commerce (Computer Application)</strong>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">KMG College of Arts & Science (2017 – 2020)</p>
+          </div>
+          <h4 style="margin: 20px 0 10px; font-size: 0.95rem; color: var(--primary);">Projects on GitHub:</h4>
+          <div class="project-item">
+            • <a href="https://github.com/deepanrajprince" target="_blank" style="color:var(--text); text-decoration:none;">INX Future Inc Employee Performance Analysis</a>
+          </div>
+          <div class="project-item">
+            • <a href="https://github.com/deepanrajprince" target="_blank" style="color:var(--text); text-decoration:none;">Insurance Cost Prediction Model (Python)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-banner">
+        <h2 style="font-size: 2.2rem; margin-bottom: 12px;">Let’s Build High-Impact Teams Together</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 30px;">
+          I am actively exploring strategic Talent Acquisition and Technical Recruiting opportunities. Let's talk!
+        </p>
+        <div class="cta-group">
+          <a href="mailto:deepanrajprince@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> deepanrajprince@gmail.com</a>
+          <a href="tel:+919629577519" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> +91 9629577519</a>
+          <a href="https://www.linkedin.com/in/deepan-raj-r/" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> Connect on LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© Built with Google AI Studio & GitHub Pages • Deepan Raj R</p>
+    </div>
+  </footer>
+
+</body>
+</html>
